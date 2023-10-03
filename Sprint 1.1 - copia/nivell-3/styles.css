@@ -1,0 +1,174 @@
+* {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.general {
+    display: flex;
+    flex-flow: column nowrap;
+    background: #FEF2F4;
+    max-width: 1200px;
+}
+
+.header {
+    background: #000;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.menu {
+    background: #BE6DB7;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100px;
+    align-items: center;
+}
+
+.logo {
+    background: #FDD36A;
+    flex: 1 1 auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+    animation: changeColorSize 0.3s ease forwards;
+}
+
+@keyframes changeColorSize {
+    from {
+        background: #FDD36A;
+        transform: scale(1);
+    }
+
+    to {
+        background: #ff0000;
+        transform: scale(1.2);
+    }
+}
+
+.nav {
+    background: #FDD36A;
+    flex: 5 1 auto;
+}
+
+.rrss {
+    background: #FDD36A;
+    flex: 1 1 auto;
+}
+
+.principal-text {
+    background: #DC8449;
+}
+
+h1 {
+    background: #C04A82;
+}
+
+.section {
+    background: #000;
+    display: flex;
+}
+
+.articles {
+    background: #98D8AA;
+    flex: 2 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.article {
+    background: #F3E99F;
+    flex: 1 1 40%;
+}
+
+.navegacion {
+    background: #E5BEEC;
+    flex: 1 1 100%;
+}
+
+.aside {
+    background: #05BFDB;
+    flex: 1 1 auto;
+}
+
+.publi {
+    background: #088395;
+}
+
+.footer {
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.final {
+    background: #FFABAB;
+    width: 300px;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .section {
+        flex-direction: column;
+        background: #ffff00;
+    }
+    .menu {
+        height: auto;
+    }
+
+    .aside {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    body {
+        background: #800080;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .section {
+        flex-direction: column;
+        background: #ffff00;
+    }
+
+    .menu {
+        flex-direction: column;
+        flex-flow: column;
+        height: auto;
+    }
+
+    .logo {
+        width: 100%;
+    }    
+
+    .nav {
+        width: 100%;
+    }    
+
+    .rrss {
+        width: 100%;
+    }
+
+    .aside {
+        display: flex;
+        justify-content: center;
+        background: #ff8000;
+        flex-direction: column;
+    }
+
+    .articles {
+        flex-direction: column;
+    }
+
+    .publi {
+        background: #f7bd56;
+    }
+
+    body {
+            background: #ff0080;
+    }
+}
